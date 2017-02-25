@@ -10,18 +10,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+// Creates a class object hero with an id and name
+var Hero = (function () {
+    function Hero() {
+    }
+    return Hero;
+}());
+exports.Hero = Hero;
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Tour of Heroes';
-        this.hero = 'Windstorm';
+        // Now this refers to Hero object created above for information
+        this.hero = {
+            id: 1,
+            name: 'Windstorm'
+        };
     }
     AppComponent = __decorate([
         core_1.Component({
             // Selector selects the HTML element to put the template in
             selector: 'my-app',
-            // Template takes data exported below and add it to the HTML elements
+            // Template takes data exported below and add it to the DOM
             // The double curlys denote interpolation/data binding
-            template: "<h1>{{title}}</h1><h2>{{hero}} details!</h2>",
+            // Now hero object is called and it's name is referenced
+            template: "<h1>{{title}}</h1><h2>{{hero.name}} details!</h2>",
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

@@ -15,7 +15,12 @@ export class Hero {
   // Template takes data exported below and add it to the DOM
   // The double curlys denote interpolation/data binding
   // Now hero object is called and it's name is referenced
-  template: `<h1>{{title}}</h1><h2>{{hero.name}} details!</h2>`,
+  template: `
+    <h1>{{title}}</h1>
+    <h2>{{hero.name}} details!</h2>
+    <div><label>id: </label>{{hero.id}}</div>
+    <div><label>name: </label>{{hero.name}}</div>
+    `,
 })
 
 // Allows you to export properties from your database

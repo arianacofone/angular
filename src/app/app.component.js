@@ -33,7 +33,7 @@ var AppComponent = (function () {
             // Template takes data exported below and add it to the DOM
             // The double curlys denote interpolation/data binding
             // Now hero object is called and it's name is referenced
-            template: "<h1>{{title}}</h1><h2>{{hero.name}} details!</h2>",
+            template: "\n    <h1>{{title}}</h1>\n    <h2>{{hero.name}} details!</h2>\n    <div><label>id: </label>{{hero.id}}</div>\n    <div><label>name: </label>{{hero.name}}</div>\n    ",
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

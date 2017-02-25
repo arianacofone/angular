@@ -3,7 +3,16 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'angular',
-  template: `<h1>Hello {{name}}</h1>`,
+  // Selector selects the HTML element to put the template in
+  selector: 'my-app',
+
+  // Template takes data exported below and add it to the HTML elements
+  // The double curlys denote interpolation/data binding
+  template: `<h1>{{title}}</h1><h2>{{hero}} details!</h2>`,
 })
-export class AppComponent  { name = 'Angular'; }
+
+// Allows you to export properties from your database
+export class AppComponent  {
+  title = 'Tour of Heroes';
+  hero = 'Windstorm';
+}

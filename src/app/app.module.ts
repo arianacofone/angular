@@ -1,3 +1,5 @@
+// This is the root module that tells Angular how to assemble the app
+
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
